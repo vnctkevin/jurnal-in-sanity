@@ -4,7 +4,7 @@ import Layout from 'components/BlogLayout'
 import HeroPost from 'components/HeroPost'
 import IndexPageHead from 'components/IndexPageHead'
 import MoreStories from 'components/MoreStories'
-import IntroTemplate from 'intro-template'
+import Logo from './Logo'
 import * as demo from 'lib/demo.data'
 import type { Post, Settings } from 'lib/sanity.queries'
 
@@ -23,9 +23,9 @@ export default function IndexPage(props: IndexPageProps) {
   return (
     <>
       <IndexPageHead settings={settings} />
-
       <Layout preview={preview} loading={loading}>
         <Container>
+          <Logo/>
           <BlogHeader title={title} description={description} level={1} />
           {heroPost && (
             <HeroPost
