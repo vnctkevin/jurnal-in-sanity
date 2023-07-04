@@ -3,7 +3,7 @@
 export default function Logo() {
     return (
         <section className="flex justify-center items-center mt-16 mb-16 md:mb-12">
-            <img src="/images/logo.png" className="w-32 h-32 rounded-full mr-4" alt="JVK" />
+            <img src="/images/logo.png" className="w-20 h-20 rounded-full mr-4" alt="JVK" />
         </section>
     )
   }
