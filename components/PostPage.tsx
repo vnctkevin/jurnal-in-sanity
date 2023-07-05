@@ -11,6 +11,7 @@ import * as demo from 'lib/demo.data'
 import type { Post, Settings } from 'lib/sanity.queries'
 import { notFound } from 'next/navigation'
 import Logo from './Logo'
+import Footer from './Footer'
 
 export interface PostPageProps {
   preview?: boolean
@@ -58,6 +59,7 @@ export default function PostPage(props: PostPageProps) {
             </>
           )}
         </Container>
+        <Footer/>
       </Layout>
     </>
   )
