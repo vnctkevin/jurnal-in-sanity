@@ -1,4 +1,4 @@
-import {BsInstagram, BsTwitter, BsGithub, BsMedium} from 'react-icons/bs'
+import {BsInstagram, BsTwitter, BsGithub, BsMedium, BsYoutube} from 'react-icons/bs'
 
 export default function Footer() {
     return (
@@ -9,6 +9,7 @@ export default function Footer() {
                 <a href='https://www.twitter.com/vnctkevin/'><BsTwitter className="w-8 h-8 mr-4" /></a>
                 <a href='https://www.instagram.com/vnctkevin/'><BsInstagram className="w-8 h-8 mr-4" /></a>
                 <a href='https://medium.com/@vnctkevin'><BsMedium className="w-8 h-8 mr-4" /></a>
+                <a href='https://www.youtube.com/@vnctkevin/videos'><BsYoutube className="w-8 h-8 mr-4" /></a>
             </div>
             <p>Copyright © 2023 JVK. All rights reserved.</p>
         </footer>
