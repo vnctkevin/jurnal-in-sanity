@@ -37,6 +37,7 @@ export default function AboutPage(props: AboutPageProps) {
                             src="/images/about.jpg"
                             alt="Kevin"
                             fill
+                            sizes="(max-width: 320px) 100vw, 960px"
                             className="object-cover"
                             />
                 </div>
