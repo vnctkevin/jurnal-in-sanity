@@ -10,7 +10,7 @@ import SectionSeparator from 'components/SectionSeparator'
 import * as demo from 'lib/demo.data'
 import type { Post, Settings } from 'lib/sanity.queries'
 import { notFound } from 'next/navigation'
-import Logo from './Logo'
+import Navbar from './Navbar'
 import Footer from './Footer'
 
 export interface PostPageProps {
@@ -39,7 +39,7 @@ export default function PostPage(props: PostPageProps) {
 
       <Layout preview={preview} loading={loading}>
         <Container>
-          <Logo/>
+          <Navbar/>
           <BlogHeader title={title} level={2} />
           {preview && !post ? (
             <PostTitle>Loading…</PostTitle>
