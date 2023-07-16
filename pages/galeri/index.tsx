@@ -43,10 +43,10 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
           <div className="after:content relative mb-5 flex h-[629px] flex-col items-center justify-end gap-4 overflow-hidden rounded-lg bg-white/10 px-6 pb-16 pt-64 text-center text-white shadow-highlight after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight lg:pt-0">
             
             <h1 className="mt-8 mb-4 font-bold text-black uppercase tracking-widest">
-              JVK-AP-001
+              Galeri Foto
             </h1>
             <p className="max-w-[40ch] text-black sm:max-w-[32ch]">
-              Sebuah karya fotografi analog yang menggambarkan berbagai rangkaian peristiwa yang saya alami pada Desember 2022-Januari 2023. Difoto dengan kamera analog Fujica M1 dan roll film Retropolis 200 (ISO 200).
+              Berbagai karya fotografi yang pernah dibuat di dalam proyek Jurnal Visual Kevin
             </p>
           </div>
           {images.map(({ id, public_id, format, blurDataUrl }) => (
