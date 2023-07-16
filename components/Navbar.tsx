@@ -7,6 +7,7 @@ import NavItem from "components/NavItem";
 const MENU_LIST = [
   { text: "Home", href: "/" },
   { text: "About", href: "/about" },
+  { text: "Galeri", href: "/galeri" },
 ];
 const Navbar = () => {
   const [navActive, setNavActive] = useState(null);

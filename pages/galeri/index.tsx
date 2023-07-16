@@ -9,6 +9,7 @@ import getBase64ImageUrl from 'utils/generateBlurPlaceholder'
 import type { ImageProps } from 'utils/types'
 import { useLastViewedPhoto } from 'utils/useLastViewedPhoto'
 import Footer from 'components/Footer'
+import Modal from 'components/Modal'
 
 const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
   const router = useRouter()
@@ -39,18 +40,47 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
         />
       </Head>
       <main className="mx-auto max-w-[1960px] p-4">
+        {photoId && (
+          <Modal
+            images={images}
+            onClose={() => {
+              setLastViewedPhoto(photoId)
+            }}
+          />
+        )}
         <div className="columns-1 gap-4 sm:columns-2 xl:columns-3 2xl:columns-4">
-          <div className="after:content relative mb-5 flex h-[629px] flex-col items-center justify-end gap-4 overflow-hidden rounded-lg bg-white/10 px-6 pb-16 pt-64 text-center text-white shadow-highlight after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight lg:pt-0">
+          <div className="after:content relative mb-5 flex h-[629px] flex-col items-center justify-end gap-4 overflow-hidden rounded-lg bg-white/10 px-6 pb-16 pt-64 text-center after:pointer-events-none after:absolute after:inset-0 after:rounded-lg lg:pt-0">
+            <div className="absolute inset-0 flex flex-col items-center justify-center">
+            <a
+              className="pointer z-10 mt-6 rounded-lg border border-white bg-white px-3 py-2 text-sm font-semibold text-black transition hover:underline md:mt-4"
+              href="/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Kembali ke Beranda
+            </a>
+              <span className="flex max-h-full max-w-full items-center justify-center">
+                <img src="images/logo-kevin.png" alt="Kevin" className="max-h-full max-w-full" />
+              </span>
+              
+            </div>
             
-            <h1 className="mt-8 mb-4 font-bold text-black uppercase tracking-widest">
+            <h1 className="mt-8 mb-4 font-bold uppercase tracking-widest">
               Galeri Foto
             </h1>
-            <p className="max-w-[40ch] text-black sm:max-w-[32ch]">
-              Berbagai karya fotografi yang pernah dibuat di dalam proyek Jurnal Visual Kevin
+            <p className="max-w-[40ch] sm:max-w-[32ch]">
+              Berbagai karya fotografi yang telah dibuat di dalam proyek Jurnal Visual Kevin.
             </p>
           </div>
           {images.map(({ id, public_id, format, blurDataUrl }) => (
-            
+            <Link
+              key={id}
+              href={`galeri/p/?photoId=${id}`}
+              as={`/galeri/p/${id}`}
+              ref={id === Number(lastViewedPhoto) ? lastViewedPhotoRef : null}
+              shallow
+              className="after:content group relative mb-5 block w-full cursor-zoom-in after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight"
+            >
               <Image
                 alt="Next.js Conf photo"
                 className="transform rounded-lg brightness-90 transition will-change-auto group-hover:brightness-110"
@@ -65,7 +95,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
                   (max-width: 1536px) 33vw,
                   25vw"
               />
-
+            </Link>
           ))}
         </div>
       </main>
