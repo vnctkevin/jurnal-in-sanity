@@ -55,7 +55,7 @@ export default function AboutPage(props: AboutPageProps) {
                   artwork has their own stories to tell. And this platform is the medium to tell those stories. Through this platform, I want to start a journey to dive into the corner of my mind,
                   to the edges of norms, to question everything, and to bring my ideas and yours to fruition.
                   </p> <br></br>
-                <h2 className="mt-2 mb-3 text-2xl font-semibold tracking-tight text-center lg:leading-snug text-brand-primary lg:text-4xl dark:text-white">
+                <h2 className="mt-2 mb-3 text-2xl font-semibold tracking-tight text-center lg:leading-snug text-brand-primary lg:text-4xl text-white">
                   About Me
                 </h2>
                 <div className="grid grid-cols-3 gap-5 mt-6 mb-16 md:mt-16 md:mb-16 md:gap-16">
