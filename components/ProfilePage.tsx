@@ -63,7 +63,7 @@ export default function ProfilePage(props: ProfilePageProps) {
                 <div></div>
             
             </div>
-            <div className="mx-auto prose text-center dark:prose-invert mt-14 mx-8">
+            <div className="mx-auto prose text-center dark:prose-invert mt-14 mx-32">
                 <p>
                 My name is Kevin. I am a creative and dedicated person who's passionate about 
                 <b> visual design, UI/UX design, and software and web development. </b>
@@ -73,31 +73,14 @@ export default function ProfilePage(props: ProfilePageProps) {
                 to cooperate with you.
                 </p>
             </div>
-            <div className='flex items-center mx-auto justify-center space-x-4 my-12'>
-                <Link href={"/assets/CV_Kevin.pdf"}>
-                    <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
-                        Download CV
-                    </button>
-                </Link>
-                <Link href={"/assets/Portofolio Documentation.pdf"}>
-                    <button className="bg-black hover:bg-gray-700 text-white font-semibold py-2 px-4 border border-gray-400 rounded shadow">
-                        Download Portfolio
-                    </button>
-                </Link>
-            </div>
-
-            </Container>
-            <Container>
-            <h1 className="mt-2 mb-3 text-3xl font-semibold tracking-tight text-center lg:leading-snug text-brand-primary lg:text-4xl">
-                Works
-            </h1>
             
- 
+            <Link href={"https://vnctkevin.me/"}>
+                <p className="text-center text-lg underline my-12">Visit my portfolio website</p>
+                </Link>
             </Container>
         </Container>
         <Footer/>
       </Layout>
-      <MyTabs/>
     </>
     
   );
