@@ -1,11 +1,11 @@
 # A Next.js Blog with a Native Authoring Experience as well as Cloudinary Image Gallery<!-- omit in toc -->
 
-This blog is a statically generated blog that uses [Next.js][nextjs] for the frontend and [Sanity][sanity-homepage] to handle its blog content as well as [Cloudinary][cloudinary] image gallery. It comes with a native Sanity Studio that offers features like real-time collaboration, instant side-by-side content previews, and intuitive editing. 
+This blog is a statically generated blog that uses [Next-js](https://github.com/vercel/next.js) for the frontend and [Sanity](sanity-homepage) to handle its blog content as well as [Cloudinary](cloudinary) image gallery. It comes with a native Sanity Studio that offers features like real-time collaboration, instant side-by-side content previews, and intuitive editing. 
 
-The project is based on the [Next.js Blog with a Native Authoring Experience][https://github.com/sanity-io/nextjs-blog-cms-sanity-v3] and the [Next.js & Cloudinary example app][https://github.com/vercel/next.js/tree/canary/examples/with-cloudinary]. The project is currently deployed in Vercel[vercel].
+The project is based on the [Next.js Blog with a Native Authoring Experience](https://github.com/sanity-io/nextjs-blog-cms-sanity-v3) and the [Next.js & Cloudinary example app](https://github.com/vercel/next.js/tree/canary/examples/with-cloudinary). The project is currently deployed in [Vercel](vercel).
 
 
-[![Deploy with Vercel](https://vercel.com/button)][vercel-deploy]
+![Deploy with Vercel](https://vercel.com/button)
 
 > **Note**
 >
