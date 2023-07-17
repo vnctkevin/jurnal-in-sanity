@@ -1,4 +1,4 @@
-import AboutPage from 'components/AboutPage'
+import ProfilePage from 'components/ProfilePage'
 import { readToken } from 'lib/sanity.api'
 import { getAllPosts, getClient, getSettings } from 'lib/sanity.client'
 import { Post, Settings } from 'lib/sanity.queries'
@@ -17,8 +17,8 @@ interface PageProps extends SharedPageProps {
   
   export default function Page(props: PageProps) {
     const { posts, settings, draftMode } = props
-  
-    return <AboutPage settings={settings} />
+    
+    return <ProfilePage settings={settings} />
   }
   
   export const getStaticProps: GetStaticProps<PageProps, Query> = async (ctx) => {
