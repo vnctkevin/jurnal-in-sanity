@@ -49,6 +49,20 @@ export default function ProfilePage(props: ProfilePageProps) {
                 <p className="text-lg">I synthesize ideas into visuals and codes.</p>
             </div>
 
+            <div className="grid grid-cols-4 gap-5 mt-6 mb-16 md:mt-16 md:mb-16 md:gap-16">
+                <div></div>
+                <div className='relative col-span-2 overflow-hidden items-center aspect-square odd:translate-y-10 odd:md:translate-y-16'>
+                    <Image
+                            src="/images/profile.jpg"
+                            alt="Kevin"
+                            fill
+                            sizes="(max-width: 320px) 112vw, 1080px"
+                            className="object-cover"
+                            />
+                </div>
+                <div></div>
+            </div>
+
             <div className="mx-auto prose text-center dark:prose-invert mt-14 mx-32">
                 <p>
                 My name is Kevin. I am a creative and dedicated person who's passionate about 
