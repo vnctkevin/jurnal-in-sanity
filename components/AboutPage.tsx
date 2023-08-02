@@ -42,7 +42,6 @@ export default function AboutPage(props: AboutPageProps) {
                             />
                 </div>
                 <div></div>
-            
             </div>
             
 
