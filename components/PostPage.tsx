@@ -12,6 +12,7 @@ import type { Post, Settings } from 'lib/sanity.queries'
 import { notFound } from 'next/navigation'
 import Navbar from './Navbar'
 import Footer from './Footer'
+import ShareButton  from './ShareButton'
 
 export interface PostPageProps {
   preview?: boolean
@@ -54,6 +55,7 @@ export default function PostPage(props: PostPageProps) {
                 />
                 <PostBody content={post.content} />
               </article>
+              <ShareButton slug={post.slug}/>
               <SectionSeparator />
               {morePosts?.length > 0 && <MoreStories posts={morePosts} />}
             </>
