@@ -68,15 +68,11 @@ export default function ProfilePage(props: ProfilePageProps) {
                 My name is Kevin. I am a creative and dedicated person who's passionate about 
                 <b> visual design, UI/UX design, and software and web development. </b>
                 Currently, I am studying Computer Science at University of Indonesia as an undergraduate student. 
-                After four years of experience in the creative field, I have helped 
+                After five years of experience in the creative field, I have helped 
                 people visualize their dreams and visions, and I will be more than happy 
                 to cooperate with you.
                 </p>
             </div>
-            
-            <Link href={"https://vnctkevin.me/"}>
-                <p className="text-center text-lg underline my-12">Visit my portfolio website</p>
-                </Link>
             </Container>
         </Container>
         <Footer/>
