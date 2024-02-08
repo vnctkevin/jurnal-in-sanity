@@ -26,7 +26,7 @@ export default function BlogHeader({
                   {title}
                 </h1>
                 <h4
-                  className={`mt-5text-lg md:text-left ${styles.portableText}`}
+                  className={`mt-5 md:text-left mr-16 ${styles.portableText}`}
                 >
                   <PortableText value={description} />
                 </h4>
