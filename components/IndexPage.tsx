@@ -25,12 +25,15 @@ export default function IndexPage(props: IndexPageProps) {
     <>
       <IndexPageHead settings={settings} />
       <Layout preview={preview} loading={loading}>
-        <Container>
-          <Navbar/>
-          <BlogHeader title={title} description={description} level={1} />
-          {listPosts.length > 0 && <MoreStories posts={listPosts} />}
-        </Container>
-        <Footer/>
+        <div className="flex md:flex-row flex-col">
+          <div className="md:w-1/2 w-full h-screen bg-black px-16 overflow-hidden justify-space-between">
+              <Navbar/>
+              <BlogHeader title={title} description={description} level={1} />
+          </div>
+          <div className="md:w-1/2 px-8 py-16 md:fixed right-0 top-0 bottom-0 overflow-y-auto">
+            {listPosts.length > 0 && <MoreStories posts={listPosts} />}
+          </div>
+        </div>
       </Layout>
     </>
   )

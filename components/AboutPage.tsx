@@ -5,6 +5,7 @@ import Footer from './Footer'
 import Navbar from './Navbar'
 import Layout from 'components/BlogLayout'
 import IndexPageHead from 'components/IndexPageHead'
+import BlogHeader from 'components/BlogHeader'
 import type { Settings } from 'lib/sanity.queries'
 
 
@@ -20,9 +21,12 @@ export default function AboutPage(props: AboutPageProps) {
     <>
       <IndexPageHead settings={settings} />
       <Layout preview={preview} loading={loading}>
-        <Container>
-          <Navbar/>
-            <Container>
+        <div className="flex md:flex-row flex-col">
+          <div className="md:w-1/2 w-full h-screen bg-black px-16 overflow-hidden justify-space-between">
+              <Navbar/>
+              <BlogHeader title="About" level={1} />
+          </div>
+          <div className="md:w-1/2 px-8 py-16 md:fixed right-0 top-0 bottom-0 overflow-y-auto">
             <h1 className="mt-2 mb-3 text-3xl font-bold tracking-tight text-center lg:leading-snug text-brand-primary lg:text-4xl">
                 About
             </h1>
@@ -55,8 +59,8 @@ export default function AboutPage(props: AboutPageProps) {
                   to the edges of norms, to question everything, and to bring my ideas and yours to fruition.
                   </p> <br></br>
                   </div>
-            </Container>
-        </Container>
+            </div>
+          </div>  
         <Footer/>
       </Layout>
     </>

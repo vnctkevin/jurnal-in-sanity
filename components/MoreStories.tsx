@@ -20,7 +20,7 @@ export default function MoreStories({ posts }: { posts: Post[] }) {
   return (
     <section>
       
-      <div className='mb-32 grid grid-cols-1 gap-y-20 md:grid-cols-2 lg:grid-cols-3 md:gap-x-16 md:gap-y-24 lg:gap-x-28'
+      <div className='mb-32 grid grid-cols-1 gap-y-20 md:gap-y-24'
         >
         {posts.map((post) => (
           <motion.div

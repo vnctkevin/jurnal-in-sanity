@@ -16,12 +16,12 @@ const Navbar = () => {
 
   return (
     <header>
-      <nav className={`nav flex justify-between flex-col md:flex-row mt-16 mb-16 md:mb-12 items-center`}>
+      <nav className={`nav bg-black text-white mt-16 mb-16 md:mb-12 items-center`}>
         <div>
             <Logo />
         </div>
         
-        <div className={`${navActive ? "active" : ""} nav__menu-bar flex flex-row space-x-4 max-md:mt-4`}>
+        <div className={`${navActive ? "active underline" : ""} align-text-left text-xl max-md:mt-4`}>
           {MENU_LIST.map((menu, idx) => (
             <div
               onClick={() => {
@@ -29,6 +29,7 @@ const Navbar = () => {
                 setNavActive(false);
               }}
               key={menu.text}
+              className="mx-4 my-4"
             >
               <NavItem active={activeIdx === idx} {...menu} />
             </div>
