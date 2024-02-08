@@ -35,6 +35,7 @@ export default function IndexPage(props: IndexPageProps) {
           </div>
         </div>
       </Layout>
+      <Footer />
     </>
   )
 }
