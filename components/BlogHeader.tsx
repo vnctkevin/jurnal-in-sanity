@@ -1,7 +1,7 @@
 import { PortableText } from '@portabletext/react'
 import Link from 'next/link'
-
 import styles from './BlogHeader.module.css'
+import { motion } from 'framer-motion'
 
 export default function BlogHeader({
   title,
@@ -16,16 +16,21 @@ export default function BlogHeader({
     case 1:
       return (
         <>
-        <header className="mb-10 mt-16 flex flex-col items-center md:mb-12 md:flex-row md:justify-between">
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0}}
+          transition={{ duration: 0.8 }}>
+        <header className="mb-10 mt-16 items-center text-center md:text-left md:mb-12 md:flex-row">
           <h1 className="text-6xl font-bold leading-tight tracking-tighter md:pr-8 md:text-8xl">
             {title}
           </h1>
           <h4
-            className={`mt-5 text-center text-lg md:pl-8 md:text-left ${styles.portableText}`}
+            className={`mt-5 text-center text-lg md:text-left ${styles.portableText}`}
           >
             <PortableText value={description} />
           </h4>
         </header>
+        </motion.div>
         <hr className="border-accent-3 mb-12" />
         </>
       )
