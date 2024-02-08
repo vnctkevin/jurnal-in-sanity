@@ -32,10 +32,11 @@ export default function IndexPage(props: IndexPageProps) {
           </div>
           <div className="md:w-1/2 px-8 py-16 md:fixed right-0 top-0 bottom-0 overflow-y-auto">
             {listPosts.length > 0 && <MoreStories posts={listPosts} />}
+            <Footer />
           </div>
         </div>
       </Layout>
-      <Footer />
+      
     </>
   )
 }

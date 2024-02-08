@@ -63,9 +63,9 @@ export default function PostPage(props: PostPageProps) {
                 {morePosts?.length > 0 && <MoreStories posts={morePosts} />}
               </>
           )}
+          <Footer />
           </div>
         </div>
-        <Footer/>
       </Layout>
     </>
   )

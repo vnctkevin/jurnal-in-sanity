@@ -74,9 +74,9 @@ export default function ProfilePage(props: ProfilePageProps) {
                 to cooperate with you.
                 </p>
             </div>
+            <Footer />
             </div>
         </div>  
-        <Footer/>
       </Layout>
     </>
     

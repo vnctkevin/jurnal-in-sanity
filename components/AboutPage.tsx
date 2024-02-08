@@ -59,9 +59,10 @@ export default function AboutPage(props: AboutPageProps) {
                   to the edges of norms, to question everything, and to bring my ideas and yours to fruition.
                   </p> <br></br>
                   </div>
+                  <Footer/>
             </div>
           </div>  
-        <Footer/>
+        
       </Layout>
     </>
     
