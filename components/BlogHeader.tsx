@@ -16,7 +16,7 @@ export default function BlogHeader({
     case 1:
       return (
         <>
-        <div className="h-dvh overflow-hidden bottom-0 absolute md:w-1/2 md:pr-32 pr-16 justify-space-between">
+        <div className="h-dvh overflow-hidden bottom-0 absolute md:w-1/2 md:pr-32 sm:pr-16 pr-8 justify-space-between">
             <motion.div
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0}}

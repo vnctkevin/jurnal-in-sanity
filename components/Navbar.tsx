@@ -29,7 +29,7 @@ const Navbar = () => {
                 setNavActive(false);
               }}
               key={menu.text}
-              className="mx-4 my-4"
+              className="sm:my-4 my-2 mx-2"
             >
               <NavItem active={activeIdx === idx} {...menu} />
             </div>
