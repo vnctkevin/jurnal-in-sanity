@@ -53,7 +53,7 @@ export default function ProfilePage(props: ProfilePageProps) {
                 <div></div>
                 <div className='relative col-span-2 overflow-hidden items-center aspect-square odd:translate-y-10 odd:md:translate-y-16'>
                     <Image
-                            src="/images/Grid2024.jpg"
+                            src="/images/profile-2024.jpg"
                             alt="Kevin"
                             fill
                             sizes="(max-width: 320px) 112vw, 1080px"
