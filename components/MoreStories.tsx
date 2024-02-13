@@ -1,4 +1,5 @@
 import PostPreview from 'components/PostPreview'
+import PostPreviewNew from 'components/PostPreviewNew'
 import type { Post } from 'lib/sanity.queries'
 import { motion } from 'framer-motion'
 
@@ -18,16 +19,21 @@ const variants = {
 
 export default function MoreStories({ posts }: { posts: Post[] }) {
   return (
-    <section>
-      
-      <div className='mb-32 grid grid-cols-1 gap-y-20 md:gap-y-24'
+    <section className='w-full pb-8 md:pb-16 lg:pb-24'>
+      <div className="container grid items-center pb-12">
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Featured Posts</h2>
+          <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+              Stories about my experiences, projects, and thoughts.
+            </p>
+        </div>
+      <div className='mb-32 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-20 gap-x-8 md:gap-y-24'
         >
         {posts.map((post) => (
           <motion.div
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 }}}
         >
-          <PostPreview
+          <PostPreview 
             key={post._id}
             title={post.title}
             coverImage={post.coverImage}
