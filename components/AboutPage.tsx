@@ -21,19 +21,19 @@ export default function AboutPage(props: AboutPageProps) {
     <>
       <IndexPageHead settings={settings} />
       <Layout preview={preview} loading={loading}>
-        <div className="flex md:flex-row flex-col">
-          <div className="md:w-1/2 w-full h-screen bg-black px-16 overflow-hidden justify-space-between">
-              <Navbar/>
-              <BlogHeader title="About" level={1} />
-          </div>
-          <div className="md:w-1/2 px-8 py-16 md:fixed right-0 top-0 bottom-0 overflow-y-auto">
+        <Container>
+          <Navbar/>
+            <Container>
+            <h1 className="mt-2 mb-3 text-3xl font-bold tracking-tight text-center lg:leading-snug text-brand-primary lg:text-4xl">
+                About
+            </h1>
             <div className="text-center">
                 <p className="text-lg">So, you think this is another portfolio websites, right?</p>
             </div>
 
-            <div className="grid grid-cols-4 mt-6 mb-8 md:mt-16 md:mb-16 md:gap-16">
+            <div className="grid grid-cols-4 gap-5 mt-6 mb-16 md:mt-16 md:mb-16 md:gap-16">
                 <div></div>
-                <div className='relative col-span-4 md:col-span-2 overflow-hidden items-center aspect-square odd:translate-y-10 odd:md:translate-y-16'>
+                <div className='relative col-span-2 overflow-hidden items-center aspect-square odd:translate-y-10 odd:md:translate-y-16'>
                     <Image
                             src="/images/about.jpg"
                             alt="Kevin"
@@ -56,10 +56,9 @@ export default function AboutPage(props: AboutPageProps) {
                   to the edges of norms, to question everything, and to bring my ideas and yours to fruition.
                   </p> <br></br>
                   </div>
-                  <Footer/>
-            </div>
-          </div>  
-        
+            </Container>
+        </Container>
+        <Footer/>
       </Layout>
     </>
     

@@ -41,13 +41,15 @@ export default function ProfilePage(props: ProfilePageProps) {
     <>
       <IndexPageHead settings={settings} />
       <Layout preview={preview} loading={loading}>
-
-        <div className="flex md:flex-row flex-col">
-          <div className="md:w-1/2 w-full h-screen bg-black px-16 overflow-hidden justify-space-between">
-              <Navbar/>
-              <BlogHeader title="Profile" level={1} />
-          </div>
-          <div className="md:w-1/2 px-8 py-16 md:fixed right-0 top-0 bottom-0 overflow-y-auto">
+        <Container>
+          <Navbar/>
+            <Container>
+            <h1 className="mt-2 mb-3 text-3xl font-bold tracking-tight text-center lg:leading-snug text-brand-primary lg:text-4xl">
+                Profile
+            </h1>
+            <div className="text-center">
+                <p className="text-lg">I synthesize ideas into visuals and codes.</p>
+            </div>
 
             <div className="grid grid-cols-4 gap-5 mt-6 mb-16 md:mt-16 md:mb-16 md:gap-16">
                 <div></div>
@@ -64,7 +66,6 @@ export default function ProfilePage(props: ProfilePageProps) {
             </div>
 
             <div className="mx-auto prose text-center dark:prose-invert mt-14 mx-32">
-              <p className="text-lg mb-12">I synthesize ideas into visuals and codes.</p>
                 <p>
                 My name is Kevin. I am a creative and dedicated person who's passionate about 
                 <b> visual design, UI/UX design, and software and web development. </b>
@@ -74,9 +75,9 @@ export default function ProfilePage(props: ProfilePageProps) {
                 to cooperate with you.
                 </p>
             </div>
-            <Footer />
-            </div>
-        </div>  
+            </Container>
+        </Container>
+        <Footer/>
       </Layout>
     </>
     
