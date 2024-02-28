@@ -1,9 +1,9 @@
 {
   "extends": "next",
-  "plugins": ["simple-import-sort"],
+  "plugins": ["react","simple-import-sort"],
   "rules": {
-    "simple-import-sort/imports": "warn",
-    "simple-import-sort/exports": "warn",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
     "react-hooks/exhaustive-deps": "error"
   }
 }
