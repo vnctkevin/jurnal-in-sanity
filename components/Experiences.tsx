@@ -1,9 +1,9 @@
+import { ChakraProvider } from '@chakra-ui/react'
+import { EXPERIENCES } from "constants/experiences"
+import { ExperiencesType, SingularExperienceType } from "constants/experiences/types"
 import Head from 'next/head'
 import Image from 'next/image'
 import * as React from 'react'
-import { EXPERIENCES } from "constants/experiences"
-import { ExperiencesType, SingularExperienceType } from "constants/experiences/types"
-import { ChakraProvider } from '@chakra-ui/react'
 import { useState } from 'react'
 
 

@@ -1,4 +1,4 @@
-import {BsInstagram, BsTwitter, BsGithub, BsMedium, BsYoutube, BsGlobe} from 'react-icons/bs'
+import {BsGithub, BsGlobe,BsInstagram, BsMedium, BsTwitter, BsYoutube} from 'react-icons/bs'
 
 export default function Footer() {
     return (

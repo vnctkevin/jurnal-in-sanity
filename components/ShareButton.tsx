@@ -1,20 +1,20 @@
 
-import React from 'react'
+import type { Post } from 'lib/sanity.queries'
 import {
-  FacebookShareButton,
   FacebookIcon,
-  PinterestShareButton,
-  PinterestIcon,
-  RedditShareButton,
-  RedditIcon,
-  WhatsappShareButton,
-  WhatsappIcon,
-  LinkedinShareButton,
+  FacebookShareButton,
   LinkedinIcon,
+  LinkedinShareButton,
+  PinterestIcon,
+  PinterestShareButton,
+  RedditIcon,
+  RedditShareButton,
   TwitterIcon,
   TwitterShareButton,
+  WhatsappIcon,
+  WhatsappShareButton,
 } from 'next-share';
-import type { Post } from 'lib/sanity.queries'
+import React from 'react'
   
 export default function ShareButton(
     props: Pick<Post, 'title' | 'coverImage' | 'date' | 'author' | 'slug'>

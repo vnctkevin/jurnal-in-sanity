@@ -1,7 +1,7 @@
 import PostPreview from 'components/PostPreview'
 import PostPreviewNew from 'components/PostPreviewNew'
-import type { Post } from 'lib/sanity.queries'
 import { motion } from 'framer-motion'
+import type { Post } from 'lib/sanity.queries'
 
 //create scrolling animation for the more stories section
 // Path: components\MoreStories.tsx

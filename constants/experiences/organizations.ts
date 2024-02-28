@@ -1,5 +1,5 @@
-import { SingularExperienceType } from "./types";
 import { SKILLS } from "./skills";
+import { SingularExperienceType } from "./types";
 
 const OrganizationsExperience: SingularExperienceType[] = [
   {

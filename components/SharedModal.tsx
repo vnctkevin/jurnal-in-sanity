@@ -1,15 +1,15 @@
 
-import { BiChevronLeft, BiChevronRight} from 'react-icons/bi'
-import { BsBoxArrowUpRight, BsX } from 'react-icons/bs'
-import { HiMiniArrowDownTray, HiArrowUturnLeft } from 'react-icons/hi2'
-
 import { AnimatePresence, motion, MotionConfig } from 'framer-motion'
 import Image from 'next/image'
 import { useState } from 'react'
+import { BiChevronLeft, BiChevronRight} from 'react-icons/bi'
+import { BsBoxArrowUpRight, BsX } from 'react-icons/bs'
+import { HiArrowUturnLeft,HiMiniArrowDownTray } from 'react-icons/hi2'
 import { useSwipeable } from 'react-swipeable'
+import { variants } from 'utils/animationVariants'
+
 import downloadPhoto from '../utils/downloadPhoto'
 import { range } from '../utils/range'
-import { variants } from 'utils/animationVariants'
 import type { ImageProps, SharedModalProps } from '../utils/types'
   
 export default function SharedModal({

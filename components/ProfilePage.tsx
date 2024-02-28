@@ -1,14 +1,15 @@
+import { Tab } from "@headlessui/react"
 import Container from 'components/BlogContainer'
-import Image from "next/image";
-import Link from "next/link";
-import Footer from './Footer'
-import Navbar from './Navbar'
+import BlogContainer from 'components/BlogContainer';
 import Layout from 'components/BlogLayout'
 import IndexPageHead from 'components/IndexPageHead'
 import type { Settings } from 'lib/sanity.queries'
-import { Tab } from "@headlessui/react"
-import BlogContainer from 'components/BlogContainer';
+import Image from "next/image";
+import Link from "next/link";
+
 import BlogHeader from './BlogHeader';
+import Footer from './Footer'
+import Navbar from './Navbar'
 
 
 export interface ProfilePageProps {

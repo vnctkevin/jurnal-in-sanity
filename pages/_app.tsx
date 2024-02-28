@@ -1,10 +1,10 @@
 import 'tailwindcss/tailwind.css'
 
-import { AppProps } from 'next/app'
-import { lazy } from 'react'
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { AppProps } from 'next/app'
 import Script from "next/script";
+import { lazy } from 'react'
 
 export interface SharedPageProps {
   draftMode: boolean

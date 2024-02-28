@@ -1,3 +1,5 @@
+import Footer from 'components/Footer'
+import Modal from 'components/Modal'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
@@ -8,8 +10,6 @@ import cloudinary from 'utils/cloudinaryConfig'
 import getBase64ImageUrl from 'utils/generateBlurPlaceholder'
 import type { ImageProps } from 'utils/types'
 import { useLastViewedPhoto } from 'utils/useLastViewedPhoto'
-import Footer from 'components/Footer'
-import Modal from 'components/Modal'
 
 const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
   const router = useRouter()

@@ -4,11 +4,12 @@ import Layout from 'components/BlogLayout'
 import HeroPost from 'components/HeroPost'
 import IndexPageHead from 'components/IndexPageHead'
 import MoreStories from 'components/MoreStories'
-import Experiences from './Experiences'
-import Navbar from './Navbar'
 import * as demo from 'lib/demo.data'
 import type { Post, Settings } from 'lib/sanity.queries'
+
+import Experiences from './Experiences'
 import Footer from './Footer'
+import Navbar from './Navbar'
 
 export interface IndexPageProps {
   preview?: boolean

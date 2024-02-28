@@ -10,8 +10,9 @@ import SectionSeparator from 'components/SectionSeparator'
 import * as demo from 'lib/demo.data'
 import type { Post, Settings } from 'lib/sanity.queries'
 import { notFound } from 'next/navigation'
-import Navbar from './Navbar'
+
 import Footer from './Footer'
+import Navbar from './Navbar'
 import ShareButton  from './ShareButton'
 
 export interface PostPageProps {
