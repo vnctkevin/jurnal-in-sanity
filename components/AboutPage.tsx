@@ -1,10 +1,11 @@
+import type { Settings } from 'lib/sanity.queries'
+import Image from "next/image";
+import Link from "next/link";
+
 import Container from 'components/BlogContainer'
 import BlogHeader from 'components/BlogHeader'
 import Layout from 'components/BlogLayout'
 import IndexPageHead from 'components/IndexPageHead'
-import type { Settings } from 'lib/sanity.queries'
-import Image from "next/image";
-import Link from "next/link";
 
 import Footer from './Footer'
 import Navbar from './Navbar'

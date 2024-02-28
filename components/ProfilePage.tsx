@@ -1,11 +1,12 @@
 import { Tab } from "@headlessui/react"
+import type { Settings } from 'lib/sanity.queries'
+import Image from "next/image";
+import Link from "next/link";
+
 import Container from 'components/BlogContainer'
 import BlogContainer from 'components/BlogContainer';
 import Layout from 'components/BlogLayout'
 import IndexPageHead from 'components/IndexPageHead'
-import type { Settings } from 'lib/sanity.queries'
-import Image from "next/image";
-import Link from "next/link";
 
 import BlogHeader from './BlogHeader';
 import Footer from './Footer'

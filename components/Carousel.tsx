@@ -1,9 +1,10 @@
+import useKeypress from 'react-use-keypress'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
-import useKeypress from 'react-use-keypress'
 
 import type { ImageProps } from '../utils/types'
 import { useLastViewedPhoto } from '../utils/useLastViewedPhoto'
+
 import Modal from './Modal'
 import SharedModal from './SharedModal'
 

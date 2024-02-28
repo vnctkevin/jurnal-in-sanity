@@ -1,6 +1,6 @@
+import { memo, useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { memo, useEffect, useState } from 'react'
 
 import cover from './cover.png'
 

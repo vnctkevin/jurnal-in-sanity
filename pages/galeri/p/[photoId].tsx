@@ -1,4 +1,3 @@
-import Carousel from 'components/Carousel'
 import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
@@ -6,6 +5,8 @@ import getResults from 'utils/cachedImages'
 import cloudinary from 'utils/cloudinaryConfig'
 import getBase64ImageUrl from 'utils/generateBlurPlaceholder'
 import type { ImageProps } from 'utils/types'
+
+import Carousel from 'components/Carousel'
 
 const Home: NextPage = ({ currentPhoto }: { currentPhoto: ImageProps }) => {
   const router = useRouter()

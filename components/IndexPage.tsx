@@ -1,11 +1,12 @@
+import * as demo from 'lib/demo.data'
+import type { Post, Settings } from 'lib/sanity.queries'
+
 import Container from 'components/BlogContainer'
 import BlogHeader from 'components/BlogHeader'
 import Layout from 'components/BlogLayout'
 import HeroPost from 'components/HeroPost'
 import IndexPageHead from 'components/IndexPageHead'
 import MoreStories from 'components/MoreStories'
-import * as demo from 'lib/demo.data'
-import type { Post, Settings } from 'lib/sanity.queries'
 
 import Experiences from './Experiences'
 import Footer from './Footer'

@@ -1,8 +1,9 @@
-import Logo from "components/Logo";
-import NavItem from "components/NavItem";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+
+import Logo from "components/Logo";
+import NavItem from "components/NavItem";
 
 const MENU_LIST = [
   { text: "Home", href: "/" },

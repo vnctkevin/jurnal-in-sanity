@@ -1,11 +1,11 @@
 
-import { AnimatePresence, motion, MotionConfig } from 'framer-motion'
-import Image from 'next/image'
 import { useState } from 'react'
 import { BiChevronLeft, BiChevronRight} from 'react-icons/bi'
 import { BsBoxArrowUpRight, BsX } from 'react-icons/bs'
 import { HiArrowUturnLeft,HiMiniArrowDownTray } from 'react-icons/hi2'
 import { useSwipeable } from 'react-swipeable'
+import { AnimatePresence, motion, MotionConfig } from 'framer-motion'
+import Image from 'next/image'
 import { variants } from 'utils/animationVariants'
 
 import downloadPhoto from '../utils/downloadPhoto'

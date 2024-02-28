@@ -1,15 +1,16 @@
-import Footer from 'components/Footer'
-import Modal from 'components/Modal'
+import { useEffect, useRef } from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { useEffect, useRef } from 'react'
 import cloudinary from 'utils/cloudinaryConfig'
 import getBase64ImageUrl from 'utils/generateBlurPlaceholder'
 import type { ImageProps } from 'utils/types'
 import { useLastViewedPhoto } from 'utils/useLastViewedPhoto'
+
+import Footer from 'components/Footer'
+import Modal from 'components/Modal'
 
 const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
   const router = useRouter()

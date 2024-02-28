@@ -1,4 +1,5 @@
 
+import React from 'react'
 import type { Post } from 'lib/sanity.queries'
 import {
   FacebookIcon,
@@ -14,7 +15,6 @@ import {
   WhatsappIcon,
   WhatsappShareButton,
 } from 'next-share';
-import React from 'react'
   
 export default function ShareButton(
     props: Pick<Post, 'title' | 'coverImage' | 'date' | 'author' | 'slug'>
