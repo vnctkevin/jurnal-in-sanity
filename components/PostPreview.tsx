@@ -32,7 +32,6 @@ export default function PostPreview({
       Posted on <Date dateString={date} />
       </div>
       {excerpt && <p className="mb-4 text-lg leading-relaxed">{excerpt}</p>}
-      {author && <Avatar name={author.name} picture={author.picture} />}
     </div>
   )
 }
