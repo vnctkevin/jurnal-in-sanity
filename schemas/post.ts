@@ -1,8 +1,9 @@
 import { BookIcon } from '@sanity/icons'
 import { format, parseISO } from 'date-fns'
 import { defineField, defineType } from 'sanity'
-
+import {tags} from 'sanity-plugin-tags'
 import authorType from './author'
+import { de } from 'date-fns/locale'
 
 /**
  * This file is the schema definition for a post.
@@ -43,7 +44,7 @@ export default defineType({
       name: 'content',
       title: 'Content',
       type: 'array',
-      of: [
+      of: [ // Fix: Change 'of' to 'fields' and wrap the array in an object with a 'type' property set to 'array'
         { type: 'block' },
         {
           type: 'image',
@@ -92,7 +93,17 @@ export default defineType({
       type: 'reference',
       to: [{ type: authorType.name }],
     }),
+    defineField({
+      name: 'tags',
+      title: 'Tags',
+      type: 'tags',
+      options: {
+        isMultiselect: true,
+        includeFromRelated: true,
+      },
+    }),
   ],
+    
   preview: {
     select: {
       title: 'title',
