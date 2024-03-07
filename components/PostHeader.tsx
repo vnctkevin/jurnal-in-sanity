@@ -6,15 +6,27 @@ import Date from 'components/PostDate'
 import PostTitle from 'components/PostTitle'
 
 export default function PostHeader(
-  props: Pick<Post, 'title' | 'coverImage' | 'date' | 'author' | 'slug'>
+  props: Pick<Post, 'title' | 'coverImage' | 'date' | 'author' | 'slug' | 'tags'>
 ) {
-  const { title, coverImage, date, author, slug } = props
+  const { title, coverImage, date, author, slug, tags } = props
   return (
     <>
       <PostTitle>{title}</PostTitle>
       <div className="hidden md:mb-6 md:block">
         {author && <Avatar name={author.name} picture={author.picture} />}
-      </div>
+        {tags && (
+          <div className="flex flex-wrap justify-center md:justify-start mt-4">
+            {tags.map((tag) => (
+              <span
+                key={tag}
+                className="mb-2 md:mb-0 md:mr-2 text-sm text-gray-700"
+              >
+                {tag}
+              </span>
+            ))}
+            </div>
+          )}
+        </div>
       <div className="mb-6 text-lg text-center md:text-left">
           <Date dateString={date} />
         </div>
