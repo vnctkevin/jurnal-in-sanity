@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Avatar from 'components/AuthorAvatar'
 import CoverImage from 'components/CoverImage'
 import Date from 'components/PostDate'
+import { tags } from 'sanity-plugin-tags'
 
 export default function PostPreview({
   title,
@@ -12,6 +13,7 @@ export default function PostPreview({
   excerpt,
   author,
   slug,
+  tags,
 }: Omit<Post, '_id'>) {
   return (
     <div>
@@ -32,6 +34,18 @@ export default function PostPreview({
       Posted on <Date dateString={date} />
       </div>
       {excerpt && <p className="mb-4 text-lg leading-relaxed">{excerpt}</p>}
+      {tags && (
+        <div className="flex flex-wrap">
+          {tags.map((tag) => (
+            <span
+              key={tag.value} 
+              className="mr-2 mb-2 px-2 py-1 bg-gray-200 text-gray-800 rounded-md"
+            >
+              {tag.label}
+            </span>
+          ))}
     </div>
+  )}
+  </div>
   )
 }

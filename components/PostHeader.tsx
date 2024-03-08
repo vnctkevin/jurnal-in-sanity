@@ -14,22 +14,22 @@ export default function PostHeader(
       <PostTitle>{title}</PostTitle>
       <div className="hidden md:mb-6 md:block">
         {author && <Avatar name={author.name} picture={author.picture} />}
+      </div>
+      <div className="mb-6 text-lg text-center md:text-left">
+        <Date dateString={date} />
         {tags && (
-          <div className="flex flex-wrap justify-center md:justify-start mt-4">
-            {tags.map((tag) => (
+          <div className="flex flex-wrap mt-2">
+            {tags.map((tag: string) => (
               <span
                 key={tag}
-                className="mb-2 md:mb-0 md:mr-2 text-sm text-gray-700"
+                className="mr-2 mb-2 px-2 py-1 bg-gray-200 text-gray-800 rounded-md"
               >
                 {tag}
               </span>
             ))}
-            </div>
-          )}
-        </div>
-      <div className="mb-6 text-lg text-center md:text-left">
-          <Date dateString={date} />
-        </div>
+          </div>
+        )}
+      </div>
       <div className="mb-8 sm:mx-0 md:mb-16">
         <CoverImage title={title} image={coverImage} priority slug={slug} />
       </div>
@@ -39,5 +39,5 @@ export default function PostHeader(
         </div>
       </div>
     </>
-  )
+  );
 }
