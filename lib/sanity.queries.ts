@@ -53,7 +53,6 @@ export interface Post {
   author?: Author
   slug?: string
   content?: any
-  tags?:any
 }
 
 export interface Settings {

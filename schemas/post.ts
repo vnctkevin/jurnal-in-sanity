@@ -93,25 +93,6 @@ export default defineType({
       type: 'reference',
       to: [{ type: authorType.name }],
     }),
-    defineField({
-      name: 'tags',
-      title: 'Tags',
-      type: "tags" || "tag",
-      options: {
-        predefinedTags:[
-            {label: 'Miscellaneous', value: 'misc'},
-            {label: 'UI/UX', value: 'ui-ux'},
-            {label: 'Design', value: 'design'},
-            {label: 'Development', value: 'development'},
-            {label: 'Case Study', value: 'case-study'},
-            {label: 'Tutorial', value: 'tutorial'}, 
-            {label: 'Resources', value: 'resources'},
-            {label: 'Article', value: 'article'},
-        ],
-        includeFromRelated: "tags",
-        includeFromReferences: "tags",
-    },
-  }),
   ],
     
   preview: {

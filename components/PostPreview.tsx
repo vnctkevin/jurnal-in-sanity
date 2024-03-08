@@ -34,18 +34,6 @@ export default function PostPreview({
       Posted on <Date dateString={date} />
       </div>
       {excerpt && <p className="mb-4 text-lg leading-relaxed">{excerpt}</p>}
-      {tags && (
-        <div className="flex flex-wrap">
-          {tags.map((tag) => (
-            <span
-              key={tag.value} 
-              className="mr-2 mb-2 px-2 py-1 bg-gray-200 text-gray-800 rounded-md"
-            >
-              {tag.label}
-            </span>
-          ))}
-    </div>
-  )}
   </div>
   )
 }
