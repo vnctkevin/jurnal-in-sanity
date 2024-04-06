@@ -33,14 +33,14 @@ export default function AboutPage(props: AboutPageProps) {
                 <p className="text-lg">So, you think this is another portfolio websites, right?</p>
             </div>
 
-            <div className="grid grid-cols-4 gap-5 mt-6 mb-16 md:mt-16 md:mb-16 md:gap-16">
+            <div className="gap-5 mt-6 mb-16 lg:mx-60 mx-12 md:mt-16 md:mb-16 md:gap-16">
                 <div></div>
-                <div className='relative col-span-2 overflow-hidden items-center aspect-square odd:translate-y-10 odd:md:translate-y-16'>
+                <div className='relative overflow-hidden items-center aspect-square odd:translate-y-10 odd:md:translate-y-16'>
                     <Image
                             src="/images/about.jpg"
                             alt="Kevin"
                             fill
-                            sizes="(max-width: 320px) 112vw, 1080px"
+                            sizes="(min-width: 480px) 480px, 100vw"
                             className="object-cover"
                             />
                 </div>
@@ -48,7 +48,7 @@ export default function AboutPage(props: AboutPageProps) {
             </div>
             
 
-            <div className="mx-auto prose text-center dark:prose-invert mt-14">
+            <div className="mx-auto prose text-center dark:prose-invert mt-14 lg:px-52">
                 <p>
                   You are (not) right. This is not another typical portfolio website.
                 </p> <br></br>

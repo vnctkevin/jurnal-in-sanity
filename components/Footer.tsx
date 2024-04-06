@@ -10,7 +10,7 @@ export default function Footer() {
                 <a href='https://www.instagram.com/vnctkevin/'><BsInstagram className="w-8 h-8 mr-4" /></a>
                 <a href='https://medium.com/@vnctkevin'><BsMedium className="w-8 h-8 mr-4" /></a>
                 <a href='https://www.youtube.com/@vnctkevin/videos'><BsYoutube className="w-8 h-8 mr-4" /></a>
-                <a href='https://vnctkevin.me/'><BsGlobe className="w-8 h-8 mr-4" /></a>
+                <a href='https://vnctkevin.com/'><BsGlobe className="w-8 h-8 mr-4" /></a>
             </div>
             <p>Copyright © 2024 JVK. All rights reserved.</p>
         </footer>
