@@ -23,7 +23,7 @@ export default function ShareButton(
   return (
     <>
     <div className="flex flex-row justify-center py-4">
-        <h3 className="text-2xl font-bold mr-4">Bagikan Artikel Ini: </h3>
+        <h3 className="text-xl font-bold mr-4">Share: </h3>
         <div className="space-x-2">
             <FacebookShareButton
                 url={`https://jurnal.vnctkevin.com/posts/${slug}`} >
