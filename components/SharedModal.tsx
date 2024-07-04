@@ -25,10 +25,11 @@ export default function SharedModal({
   currentPhoto,
   direction,
 }: SharedModalProps) {
+  
   const [loaded, setLoaded] = useState(false);
 
   let filteredImages = images?.filter((img: ImageProps) =>
-    range(index - 15, index + 15).includes(img.id),
+    range(index - 10, index + 10).includes(img.id),
   );
 
   const handlers = useSwipeable({
