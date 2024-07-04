@@ -11,7 +11,8 @@ import PostHeader from 'components/PostHeader'
 import PostPageHead from 'components/PostPageHead'
 import PostTitle from 'components/PostTitle'
 import SectionSeparator from 'components/SectionSeparator'
-import { firebase, analytics } from "../lib/firebase/firebaseClient";
+
+import { analytics,firebase } from "../lib/firebase/firebaseClient";
 
 import Footer from './Footer'
 import Navbar from './Navbar'
@@ -30,9 +31,7 @@ const NO_POSTS: Post[] = []
 export default function PostPage(props: PostPageProps) {
   const { preview, loading, morePosts = NO_POSTS, post, settings } = props
   const { title = demo.title } = settings || {}
-  firebase.analytics().logEvent('opened_post', {
-    post:post.slug,
-  });
+  
   const slug = post?.slug
 
   if (!slug && !preview) {
@@ -57,7 +56,7 @@ export default function PostPage(props: PostPageProps) {
                     coverImage={post.coverImage}
                     date={post.date}
                     author={post.author}
-                    tags={post.tags}
+
                   />
                   <PostBody content={post.content} />
                 </article>

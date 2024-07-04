@@ -15,7 +15,8 @@ import {
   WhatsappShareButton,
 } from 'next-share';
 
-import { firebase,  } from "../lib/firebase/firebaseClient";
+import { firebase } from "../lib/firebase/firebaseClient";
+import { getAnalytics } from 'firebase/analytics';
 
 export default function ShareButton(
     props: Pick<Post, 'title' | 'coverImage' | 'date' | 'author' | 'slug'>
@@ -23,7 +24,8 @@ export default function ShareButton(
     const {title, coverImage, date, author, slug} = props;
 
     const handleShare = (platform) => {
-      firebase.analytics().logEvent('post_share', {
+      const analytics = firebase.analytics();
+      analytics.logEvent('post_share', {
         platform: platform,
         title: title,
         slug: slug,
@@ -66,4 +68,5 @@ export default function ShareButton(
         </div>
       </div>
     );
+  }
 }

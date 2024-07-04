@@ -1,10 +1,12 @@
 import type { Post } from 'lib/sanity.queries'
 import Link from 'next/link'
 import { tags } from 'sanity-plugin-tags'
-
+import { firebase } from "../lib/firebase/firebaseClient";
 import Avatar from 'components/AuthorAvatar'
 import CoverImage from 'components/CoverImage'
 import Date from 'components/PostDate'
+
+
 export default function PostPreview({
   title,
   coverImage,
@@ -13,8 +15,15 @@ export default function PostPreview({
   author,
   slug,
 }: Omit<Post, '_id'>) {
+
+  const handleClick = () => {
+    firebase.analytics().logEvent('opened_experience_modal', {
+      slug: slug,
+    });
+  }
+
   return (
-    <div>
+    <div onClick={() => handleClick()}>
       <div className="mb-5">
         <CoverImage
           slug={slug}
@@ -24,7 +33,7 @@ export default function PostPreview({
         />
       </div>
       <h3 className="mb-3 text-3xl leading-snug">
-        <Link href={`/posts/${slug}`} className="hover:underline">
+        <Link href={`/posts/${slug}`} className="hover:underline" >
           {title}
         </Link>
       </h3>
