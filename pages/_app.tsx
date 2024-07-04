@@ -1,8 +1,8 @@
 import { lazy } from 'react'
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { GoogleTagManager } from '@next/third-parties/google'
 import { AppProps } from 'next/app'
-import { firebase } from '@/lib/firebase/firebaseClient'
 import Script from "next/script";
 
 import 'tailwindcss/tailwind.css'
@@ -21,6 +21,7 @@ export default function App({
   const { draftMode, token } = pageProps
   return (
     <>
+      <GoogleTagManager gtmId="G-YSBLVX27TT" />
       {draftMode ? (
         <PreviewProvider token={token}>
           <Component {...pageProps} />
