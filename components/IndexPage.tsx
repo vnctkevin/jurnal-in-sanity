@@ -23,7 +23,6 @@ export default function IndexPage(props: IndexPageProps) {
   const { preview, loading, posts, settings } = props
   const listPosts = posts
   const { title = demo.title, description = demo.description } = settings || {}
-
   return (
     <>
       <IndexPageHead settings={settings} />
