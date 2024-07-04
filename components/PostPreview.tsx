@@ -1,10 +1,10 @@
 import type { Post } from 'lib/sanity.queries'
 import Link from 'next/link'
+import { tags } from 'sanity-plugin-tags'
 
 import Avatar from 'components/AuthorAvatar'
 import CoverImage from 'components/CoverImage'
 import Date from 'components/PostDate'
-import { tags } from 'sanity-plugin-tags'
 
 export default function PostPreview({
   title,
@@ -13,7 +13,6 @@ export default function PostPreview({
   excerpt,
   author,
   slug,
-  tags,
 }: Omit<Post, '_id'>) {
   return (
     <div>

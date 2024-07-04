@@ -1,9 +1,10 @@
 import { BookIcon } from '@sanity/icons'
 import { format, parseISO } from 'date-fns'
+import { de } from 'date-fns/locale'
 import { defineField, defineType } from 'sanity'
 import {tags} from 'sanity-plugin-tags'
+
 import authorType from './author'
-import { de } from 'date-fns/locale'
 
 /**
  * This file is the schema definition for a post.

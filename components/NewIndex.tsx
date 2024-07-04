@@ -4,6 +4,7 @@
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
 import Link from "next/link"
+import Image from "next/image"
 
 export default function NewIndex() {
   return (
@@ -49,7 +50,7 @@ export default function NewIndex() {
             </div>
           </div>
           <div className="mx-auto max-w-7xl aspect-[3/1] overflow-hidden rounded-t-lg object-cover object-center">
-            <img
+            <Image
               alt="Hero"
               className="aspect-[3/1] overflow-hidden rounded-t-lg object-cover object-center"
               height="400"
@@ -61,7 +62,7 @@ export default function NewIndex() {
         <section className="py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <div className="mx-auto grid max-w-5xl items-center gap-6 lg:grid-cols-2 lg:gap-12">
-              <img
+              <Image
                 alt="Image"
                 className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
                 height="310"
@@ -117,7 +118,7 @@ export default function NewIndex() {
                       className="inline-flex h-8 items-center justify-center rounded-full border border-gray-200 border-gray-200 border-gray-200 hover:border-gray-300 hover:border-gray-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 dark:border-gray-800 dark:border-gray-800 dark:hover:border-gray-850 dark:hover:border-gray-850 dark:focus-visible:ring-gray-300"
                       href="#"
                     >
-                      <img
+                      <Image
                         alt="Avatar"
                         className="rounded-full object-cover object-center"
                         height="32"
@@ -144,7 +145,7 @@ export default function NewIndex() {
                       className="inline-flex h-8 items-center justify-center rounded-full border border-gray-200 border-gray-200 border-gray-200 hover:border-gray-300 hover:border-gray-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 dark:border-gray-800 dark:border-gray-800 dark:hover:border-gray-850 dark:hover:border-gray-850 dark:focus-visible:ring-gray-300"
                       href="#"
                     >
-                      <img
+                      <Image
                         alt="Avatar"
                         className="rounded-full object-cover object-center"
                         height="32"
@@ -171,7 +172,7 @@ export default function NewIndex() {
                       className="inline-flex h-8 items-center justify-center rounded-full border border-gray-200 border-gray-200 border-gray-200 hover:border-gray-300 hover:border-gray-300 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 dark:border-gray-800 dark:border-gray-800 dark:hover:border-gray-850 dark:hover:border-gray-850 dark:focus-visible:ring-gray-300"
                       href="#"
                     >
-                      <img
+                      <Image
                         alt="Avatar"
                         className="rounded-full object-cover object-center"
                         height="32"

@@ -61,7 +61,7 @@ const Home: NextPage = ({ images }: { images: ImageProps[] }) => {
               Kembali ke Beranda
             </a>
               <span className="flex max-h-full max-w-full items-center justify-center">
-                <img src="images/logo-kevin.png" alt="Kevin" className="max-h-full max-w-full" />
+                <Image src="/images/logo-kevin.png" width={350} height={150} alt="Kevin" className="max-h-full max-w-full" />
               </span>
               
             </div>
