@@ -11,6 +11,7 @@ import {
 import { AnimatePresence, motion, MotionConfig } from "framer-motion";
 import Image from "next/image";
 
+import { firebase } from "../lib/firebase/firebaseClient";
 import { variants } from "../utils/animationVariants";
 import downloadPhoto from "../utils/downloadPhoto";
 import { range } from "../utils/range";
@@ -47,6 +48,14 @@ export default function SharedModal({
     },
     trackMouse: true,
   });
+  
+  const handleDownload = (url, filename) => {
+    downloadPhoto(url, filename);
+    firebase.analytics().logEvent('download_photo', {
+      url: url,
+      filename: filename,
+  });
+  }
 
   let currentImage = images ? images[index] : currentPhoto;
 
@@ -83,7 +92,7 @@ export default function SharedModal({
                   width={navigation ? 1280 : 1920}
                   height={navigation ? 853 : 1280}
                   priority
-                  alt="Next.js Conf image"
+                  alt="Galeri Foto JVK"
                   onLoad={() => setLoaded(true)}
                 />
               </motion.div>
@@ -107,7 +116,7 @@ export default function SharedModal({
                       <ChevronLeftIcon className="h-6 w-6" />
                     </button>
                   )}
-                  {index + 1 < images.length && (
+                  {(index + 1 < images.length) && (
                     <button
                       className="absolute right-3 top-[calc(50%-16px)] rounded-full bg-black/50 p-3 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white focus:outline-none"
                       style={{ transform: "translate3d(0, 0, 0)" }}
@@ -131,7 +140,7 @@ export default function SharedModal({
                   </a>
                 ) : (
                   <a
-                    href={`https://twitter.com/intent/tweet?text=Check%20out%20this%20pic%20from%20Next.js%20Conf!%0A%0Ahttps://nextjsconf-pics.vercel.app/p/${index}`}
+                    href={`https://twitter.com/intent/tweet?https:/jurnal.vnctkevin.com/p/${index}`}
                     className="rounded-full bg-black/50 p-2 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white"
                     target="_blank"
                     title="Open fullsize version"
@@ -142,7 +151,7 @@ export default function SharedModal({
                 )}
                 <button
                   onClick={() =>
-                    downloadPhoto(
+                    handleDownload(
                       `https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/${currentImage.public_id}.${currentImage.format}`,
                       `${index}.jpg`,
                     )

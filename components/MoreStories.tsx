@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { motion } from 'framer-motion'
 import type { Post } from 'lib/sanity.queries'
+
 import PostPreview from 'components/PostPreview'
 
 //create scrolling animation for the more stories section

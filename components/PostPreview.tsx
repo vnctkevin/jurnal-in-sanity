@@ -1,10 +1,12 @@
 import type { Post } from 'lib/sanity.queries'
 import Link from 'next/link'
 import { tags } from 'sanity-plugin-tags'
-import { firebase } from "../lib/firebase/firebaseClient";
+
 import Avatar from 'components/AuthorAvatar'
 import CoverImage from 'components/CoverImage'
 import Date from 'components/PostDate'
+
+import { firebase } from "../lib/firebase/firebaseClient";
 
 
 export default function PostPreview({
