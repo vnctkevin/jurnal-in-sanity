@@ -3,8 +3,8 @@
  * @see https://v0.dev/t/Q19szBJ4vwL
  * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
  */
-import Link from "next/link"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function NewIndex() {
   return (

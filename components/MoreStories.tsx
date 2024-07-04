@@ -1,3 +1,4 @@
+import * as React from 'react'
 import { motion } from 'framer-motion'
 import type { Post } from 'lib/sanity.queries'
 
@@ -30,6 +31,7 @@ export default function MoreStories({ posts }: { posts: Post[] }) {
       <div className='mb-32 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-20 gap-x-8 md:gap-y-24'
         >
         {posts.map((post) => (
+          <React.Fragment key={post._id}>
           <motion.div
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 }}}
@@ -42,9 +44,9 @@ export default function MoreStories({ posts }: { posts: Post[] }) {
             author={post.author}
             slug={post.slug}
             excerpt={post.excerpt}
-            tags={post.tags}
           />
           </motion.div>
+          </React.Fragment>
         ))}
       </div>
     </section>

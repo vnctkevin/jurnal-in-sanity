@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { useSwipeable } from "react-swipeable";
 import {
   ArrowDownTrayIcon,
   ArrowTopRightOnSquareIcon,
@@ -8,12 +10,12 @@ import {
 } from "@heroicons/react/24/outline";
 import { AnimatePresence, motion, MotionConfig } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
-import { useSwipeable } from "react-swipeable";
+
 import { variants } from "../utils/animationVariants";
 import downloadPhoto from "../utils/downloadPhoto";
 import { range } from "../utils/range";
 import type { ImageProps, SharedModalProps } from "../utils/types";
+
 import Twitter from "./Icons/Twitter";
 
 export default function SharedModal({

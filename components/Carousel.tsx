@@ -50,7 +50,7 @@ export default function Carousel({
         changePhotoId={changePhotoId}
         currentPhoto={currentPhoto}
         closeModal={closeModal}
-        navigation={true}
+        navigation={false}
       />
     </div>
   )

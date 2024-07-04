@@ -1,9 +1,11 @@
+import { useRef, useState } from "react";
+import useKeypress from "react-use-keypress";
 import { Dialog } from "@headlessui/react";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
-import { useRef, useState } from "react";
-import useKeypress from "react-use-keypress";
+
 import type { ImageProps } from "../utils/types";
+
 import SharedModal from "./SharedModal";
 
 export default function Modal({

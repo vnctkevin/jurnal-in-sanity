@@ -25,8 +25,7 @@ export default function Experiences() {
   const renderExperiences = (experiences: SingularExperienceType[]) => {
       return experiences.map((experience: SingularExperienceType) => {
         return (
-          <>
-            
+            <React.Fragment key={experience.name}>
                 <div className="flex flex-col gap-2 rounded overflow-hidden shadow-lg p-8">
                   <h3 className="text-xl font-bold">{experience.name}</h3>
                     {experience.history[0].job_desc?.map((desc, i) => (
@@ -38,7 +37,7 @@ export default function Experiences() {
                         </a>
                     </div>
                 </div>
-          </>
+                </React.Fragment>
         )
       })
   }
