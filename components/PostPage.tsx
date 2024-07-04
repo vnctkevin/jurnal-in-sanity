@@ -12,8 +12,6 @@ import PostPageHead from 'components/PostPageHead'
 import PostTitle from 'components/PostTitle'
 import SectionSeparator from 'components/SectionSeparator'
 
-import { analytics,firebase } from "../lib/firebase/firebaseClient";
-
 import Footer from './Footer'
 import Navbar from './Navbar'
 import ShareButton  from './ShareButton'
