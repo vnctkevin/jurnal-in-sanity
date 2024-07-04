@@ -1,9 +1,8 @@
 import { lazy } from 'react'
+import { GoogleTagManager } from '@next/third-parties/google'
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { GoogleTagManager } from '@next/third-parties/google'
 import { AppProps } from 'next/app'
-import Script from "next/script";
 
 import 'tailwindcss/tailwind.css'
 
